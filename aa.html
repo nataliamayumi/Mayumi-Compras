@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="sistemadecompras.css">
+    </head>
+    <body>
+        <div class="b">
+        <h1>Sistema de Compras</h1>
+        </div>
+        <form>
+            <div>
+            <h2>Cliente</h2>
+            </div>
+            <hr>
+            <div class="a">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Ex: Maria,João">
+            </div>
+            <div class="a">
+                <label for="data">Dt. Nascimento:</label>
+                <input type="date" name="data" id="data">
+            </div>
+            <div class="a">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="maria@maria.com">
+            </div>
+            <div class="a">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="telefone" placeholder="(48)99999-9999">
+            </div>
+            <hr>
+            <center>
+            <button type="reset">Cancelar</button>
+            <button type="button" id="aa" onclick="salvar()">Salvar</button>
+            </center>
+        </form>
+        <script type="text/javascript">
+           
+            let a = document.getElementById('nome').value
+            let b = document.getElementById('data').value
+            let c = document.getElementById('email').value
+            let d = document.getElementById('telefone').value
+            function salvar(){
+
+            if(a==null){
+                alert("Preencha o Nome corretamente")
+            }
+            
+            if(b==null){
+                alert("Preencha a Data corretamente")
+            }
+            
+            if(c==null){
+                alert("Preencha o Email corretamente")
+            }
+            
+            if(d==null){
+                alert("Preencha o Telefone corretamente")
+            }
+        }
+        </script>
+    </body>
+</html>
