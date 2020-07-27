@@ -29,35 +29,52 @@
                 <label for="telefone">Telefone:</label>
                 <input type="text" name="telefone" id="telefone" placeholder="(48)99999-9999">
             </div>
+            
             <hr>
             <center>
             <button type="reset">Cancelar</button>
             <button type="button" id="aa" onclick="salvar()">Salvar</button>
             </center>
+            <div id="b" style=display:none><center><p id="bb"></p></center></div>
         </form>
         <script type="text/javascript">
            
-            let a = document.getElementById('nome').value
+           
+            function salvar(){
+                let a = document.getElementById('nome').value
             let b = document.getElementById('data').value
             let c = document.getElementById('email').value
             let d = document.getElementById('telefone').value
-            function salvar(){
-
-            if(a==null){
-                alert("Preencha o Nome corretamente")
+            console.log(a,b,c,d)
+                let resultado =''
+            if(a==''){
+                resultado += "Digite seu Nome<br>"
+                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById('b').style.display ="block"
             }
             
-            if(b==null){
-                alert("Preencha a Data corretamente")
+            if(b==""){
+                resultado += "Digite a Data de Nascimento<br>"
+                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById('b').style.display ="block"
             }
             
-            if(c==null){
-                alert("Preencha o Email corretamente")
+            if(c==''){
+                resultado += "Digite seu Email<br>"
+                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById('b').style.display ="block"
             }
             
-            if(d==null){
-                alert("Preencha o Telefone corretamente")
+            if(d==''){
+                resultado += "Digite seu Telefone<br>"
+                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById('b').style.display ="block"
+            }else{
+                document.getElementById('b').style.display ="block"
+                      document.getElementById("b").style.backgroundColor = "green";
+                      resultado += "Sucesso"
             }
+            document.getElementById('bb').innerHTML = resultado;
         }
         </script>
     </body>
