@@ -48,35 +48,40 @@
             let d = document.getElementById('telefone').value
             console.log(a,b,c,d)
                 let resultado =''
+            if(a=='' || b=='' || c =='' || d==""){
             if(a==''){
                 resultado += "Digite seu Nome<br>"
-                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById("b").style.backgroundColor = "red"
                       document.getElementById('b').style.display ="block"
+                      document.getElementById("nome").style.borderColor = "red"
             }
             
             if(b==""){
                 resultado += "Digite a Data de Nascimento<br>"
-                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById("b").style.backgroundColor = "red"
                       document.getElementById('b').style.display ="block"
-            }
+                      document.getElementById("data").style.borderColor = "red"           }
             
             if(c==''){
                 resultado += "Digite seu Email<br>"
-                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById("b").style.backgroundColor = "red"
                       document.getElementById('b').style.display ="block"
+                      document.getElementById("email").style.borderColor = "red"   
             }
             
             if(d==''){
                 resultado += "Digite seu Telefone<br>"
-                      document.getElementById("b").style.backgroundColor = "red";
+                      document.getElementById("b").style.backgroundColor = "red"
                       document.getElementById('b').style.display ="block"
-            }else{
+                      document.getElementById("telefone").style.borderColor = "red"   
+            }}
+            else{
                 document.getElementById('b').style.display ="block"
-                      document.getElementById("b").style.backgroundColor = "green";
+                      document.getElementById("b").style.backgroundColor = "green"
                       resultado += "Sucesso"
 
             }
-            document.getElementById('bb').innerHTML = resultado;
+            document.getElementById('bb').innerHTML = resultado
         }
         </script>
     </body>
